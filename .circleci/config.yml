@@ -42,6 +42,8 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
-      - test
-
-      - run: php artisan test
+  add_yarn_binaries_to_path:
+    steps:
+      - run:
+          name: run php test
+          command: php artisan test
