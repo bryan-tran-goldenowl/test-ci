@@ -42,3 +42,6 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
+      - test
+
+      - run: php artisan test
