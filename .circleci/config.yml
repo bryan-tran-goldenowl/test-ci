@@ -59,3 +59,8 @@ jobs:
       - run:
           name: run php test
           command: php artisan test
+
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:cb84f20b-913c-4ed1-ae11-6d3d71ac4b57@git.heroku.com/pure-lake-80927.git staging:master
