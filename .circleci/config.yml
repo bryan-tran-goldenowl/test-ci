@@ -11,9 +11,9 @@ filter_on_staging: &filter_on_staging
 
 workflows:
   version: 2
-  build_and_publish:
+  test:
     jobs:
-      - build_android:
+      - build_test:
           <<: *filter_on_staging
 
 # Define a job to be invoked later in a workflow.
